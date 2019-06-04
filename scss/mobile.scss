@@ -1,0 +1,405 @@
+@import 'vars';
+@import 'mixins';
+
+@include mobile {
+
+    header {
+        padding: 0px;
+        margin: 0px;  
+    }
+    section, footer {
+        padding: 50px 20px;  
+    }
+    h1 {
+        margin-bottom: 50px;
+    }
+    header {
+        height: 850px;
+        width: 100%;
+        .content {
+            position: absolute;
+            top: 20%;
+            left: 20px;
+            right: 20px;
+            bottom: 10%;
+            .content_title {
+                h1 {
+                    font-size: 50px;
+                }
+                p {
+                    width: 90%;
+                }
+                button {
+                    margin-top: 5px;
+                }      
+            }
+            .text_hero {
+                width: 30%;
+            }       
+            .text_hero {
+                position: absolute;
+                right: 0px;
+                bottom: 50px;
+                width: 60%;
+                text-align: right;
+                p {
+                    font-size: $small_text_size;
+                }
+            }
+            .user_hero {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                transform: none; 
+                img {
+                    border-radius: 50%;
+                    float: right;
+                    width: 30px;
+                    margin-top: 5px;
+                    transform: none;   
+                }
+                .user_name {
+                    float: right;
+                    h5 {
+                        padding: 5px 10px 0px 0px;
+                    }
+                    p {
+                        font-size: $small_text_size;
+                    }
+                } 
+            }
+        }
+        #hero_baner {
+            .baner_content {
+                width: 300px;
+                iframe {
+                    width: 300px; 
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    nav {
+        padding: 0px;
+        z-index: 100;
+        position: relative;
+        .logo {
+            padding-left: 21px;
+        }
+        #meni {
+            background-color: $meni_tablet_background;
+            float: none;
+            display: none;
+            padding-top: 100px;
+            z-index: 100;
+            ul {  
+                li {
+                    display: block;
+                    padding: 0px 6px;
+                    a {
+                        display: block;
+                        text-align: center;
+                        font-size: 18px;
+                        &:hover, &:active {
+                            color: $orange_hover;
+                        }
+                    }
+                    &:hover {
+                        border-bottom: 0px;
+                    }
+                    &:active {
+                        background-color: transparent;
+                    } 
+                }
+            }
+        }
+        #hamburger {
+            display: block;
+            height: 15px;
+            position: absolute;
+            top: 25px;
+            right: 16px;
+        }
+        #meni_x {
+            display: none;
+            height: 15px;
+            position: absolute;
+            top: 25px;
+            right: 16px;
+        }
+        #right_meni {
+            float: none;
+            background-color: $meni_tablet_background;
+            display: none;
+            padding-bottom: 100px;
+            z-index: 100;
+            a {
+                padding: 0px 6px;
+                font-size: 14pt;
+                display: block;
+                text-align: center;
+            }
+            .drop-down {
+                display: block;
+                .selected {
+                    background: transparent;
+                    display: list-item;
+                    width: 150px;
+                    cursor: pointer;
+                    padding: 0px; 
+                    border: solid 1px $select_option_color; 
+                    border-radius: 5px;
+                    margin: 7px auto;
+                    a {
+                        text-decoration: none;
+                        line-height: normal;
+                        padding: 10px;
+                        font-size: 13pt;
+                        span {
+                            cursor: pointer; 
+                            display: inline-block; 
+                            color: $main_text_color;
+                            &.value {
+                                display: none;
+                            }
+                            &:after {
+                                content: url('../images/black_down.png');
+                                display: inline-flex;
+                                vertical-align: middle;
+                                margin-left: 20px;
+                                margin-bottom: 7px; 
+                            }
+                        }
+                    }
+                }
+                .options {
+                    position: relative;
+                    background-color: $select_option_background;
+                    width: 300px;
+                    margin: 0 auto;
+                        .select {
+                            float: right;
+                            font-size: $main_font_size;
+                            line-height: 39px;
+                            color: $select_color;
+                            font-weight: normal;
+                        }
+                    span {
+                        &.value {
+                        display: none;
+                        }
+                    }
+                    ul {
+                        background-color: $select_option_background;
+                        display: none;
+                        list-style: none; 
+                        padding: 50px;
+                        position: relative; 
+                        margin: 0px auto;
+                        width: auto; 
+                        border: none;
+                        li { 
+                            a {
+                                
+                                display: block;
+                                text-decoration: none;
+                                background-color: $select_option_background;
+                                line-height: 25px;
+                                font-size: 13pt;
+                                color: $select_option_color;
+                                font-weight: normal;
+                                &:hover, &:active {
+                                    color: $main_text_color;
+                                }
+                            }
+                            #french {
+                                display: list-item;
+                            }
+                            #nederlands {
+                                display: list-item;
+                            }
+                            #german{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #search_container {
+            float: none;
+            position: absolute;
+            top: 0px;
+            right: 50px;
+            #search {
+                width: 120px;
+            }    
+        }
+    }
+
+    .slider {
+        height: 600px;
+        position: relative;
+        .slider_text {
+            float: none;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            h1 {
+                right: 20px;
+                text-align: center;
+            }
+            h2 {
+                right: 20px;
+                text-align: center;
+            }
+            p {
+                right: 20px;
+            }
+            button {
+                display: none;  
+            }
+        }
+        .carousel_box {
+            top: 220px;
+            left: 0px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 558px;
+            float: none;
+        } 
+    }
+
+    .tickets {
+        background-image: none;
+        .ticket {
+            padding-top: 20px;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            width: 100%;
+            height: auto;
+            &.big_ticket {
+                height: auto;
+            }
+            img {
+                float: none;
+                margin: 0px auto;
+                display: block;
+                &.big_img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .ticket_text {
+                float: none;
+                p {
+                    font-size: 12pt;
+                    line-height: normal;
+                    text-align: center;
+                    &.big_p {
+                        font-size: 13pt;
+                    }
+                }
+                h3 {
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+            .vl {
+                border-bottom: 4px dotted $ticket_text_color;
+                height: 2px;
+                width: 100%;
+                float: none;
+                &.big_vl {
+                    border-bottom: 6px dotted $ticket_text_color;
+                    height: 2px;
+                }
+            }
+            .price {
+                text-align: center;
+                float: none;
+                p {
+                   font-size: 24pt; 
+                }         
+                button {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .travel {
+        padding: 50px 0px;
+        .accordian_box {
+            width: 100%;
+            height: auto;
+            float: none;
+            margin: 0 auto;
+            .text_box {
+                float: none;
+                width: 100%;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+                button {
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    display: block;
+                }
+            }
+            .accordian {
+                float: none;
+                width: 100%;
+                margin: 0 auto;
+                h3 {
+                    padding: 20px 10px 10px;
+                }
+                button {
+                    width: 95%;
+                    height: 55px;
+                    margin: 10px auto;
+                }
+                .panel {
+                    margin: 0px;                
+                    p {
+                        padding: 0px 20px 20px ; 
+                    } 
+                }
+            }
+        }
+        article {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    .contact {
+        background-image: none;
+        form {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .footer {
+        display: none;
+    }
+    
+    footer {
+        p {
+            float: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        div {
+            float: none;
+            text-align: center;
+            img {
+                width: 30px;
+                margin: 15px;
+            }
+        }
+    }    
+}

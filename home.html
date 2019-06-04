@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="jquery/jquery-3.4.0.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <title>Travel site</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+
+      <div id="meni">
+        <ul>
+          <li><a href="#">Home</a> </li>
+          <li><a href="#">Discover</a> </li>
+          <li><a href="#">About us</a> </li>
+          <li><a href="#">Contact</a> </li>
+          <li><a href="#">Help</a> </li>
+        </ul>
+      </div>
+      <div id="right_meni">
+        <a href="#">Sign up</a>
+        <a href="#">Login</a>
+        <div class="drop-down">
+          <div class="selected">
+            <a href="#"><span>EN</span></a>
+          </div>
+          <div class="options">
+            <ul>
+              <li><a href="#">English<span class="value">1</span></a></li>
+              <li><a href="#" id="german">German<span class="value">2</span></a></li>
+              <li><a href="#" id="french">French<span class="value">3</span></a></li>
+              <li><a href="#" id="nederlands">Nederlands<span class="value">4</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <img src="images/menu.png" alt="menu" id="hamburger" onclick="openMenu()"/>
+      <img src="images/x_meni_close.png" alt="menu" id="meni_x" onclick="closeMenu()"/>
+      
+      <div id="search_container">
+        <img id="img_search" src="images/search.png" alt="search" onclick="showSerchBox()" />
+        <input type="search" id="search" placeholder="Search text" />
+        <img id="img_x" src="images/x.png" alt="x" onclick="hideSerchBox()" />
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="content_title">
+        <h1>Experience<br />The World</h1>
+        <p>Sed ut perspiciatis, unde omnis iste natus error sit
+          voluptatem accusantimum doloremque laudantium,
+          toatam rem aperiam eaque.</p>
+        <button type="button">Explore All</button>
+        <button type="button" class="popup" onclick="openBaner()" id="btn_watch">Watch storie</button>
+      </div>
+
+      <div class="text_hero">
+        <h4>Best travel guide!</h4>
+        <br />
+        <p>The communication was super easy and
+          quick and the place looks exactly like it does
+          on the pictures. The neighborhood is very</p>
+      </div>
+
+      <div class="user_hero">
+        <img src="images/profile_img.png" alt="profile_img" />
+        <div class="user_name">
+          <h5>Jamie Diaz</h5>
+          <p>Serbia</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero_baner">
+      <div class="baner_content">
+        <span class="close">&times;</span>
+        <iframe src="https://www.youtube.com/embed/ryFvoqqKnOw?start=10" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </header>
+
+  <section class="slider">
+    <div class="slider_text">
+      <h1>Explore</h1>
+      <h2>Most popular destinations</h2>
+      <p>Take a look at the Best Places to Travel in 2019 for additional 
+          inspiration and if you already know where you're going this 
+          coming year, share your plans with us on social media with 
+          #TLBestPlacesthis link opens in a new tab.</p>
+      <button>Explore All</button>    
+    </div>
+    <div class="carousel_box">
+      
+      <div id="carousel">
+        <img src="images/arrow_left.png" class="prev" alt="prev" />
+        <ul>
+          <li><img src="images/Slider/NS.png" alt="NS"/><div class="text_img">NS, Serbia</div></li>
+          <li><img src="images/Slider/Amsterdam.png" alt="Amsterdam"/><div class="text_img">Amsterdam, Netherlands</div></li>
+          <li><img src="images/Slider/Bahamas.png" alt="Bahamas"/><div class="text_img">The Bahamas</div></li>
+        </ul>
+        <img src="images/arrow_right.png" class="next" alt="next" />
+      </div>
+      
+     </div> 
+  </section>
+
+  <section class="tickets">
+    <h1>Available Summer Tours</h1>
+    <div class="ticket big_ticket">
+      <img class="big_img" src="images/tour1.png" alt="tour1" />
+      <div class="ticket_text">
+        <h3 class="big_h3">City Hiking Tour (3 hours)</h3>
+        <p class="big_p">Get onboard one of our Round City Cable Car Tour</p>
+      </div>
+      <div class="vl big_vl"></div>
+      <div class="price">
+        <p class="big_price">$ 45.00</p>
+        <button type="button">Book</button>
+      </div>
+    </div>
+    <div class="ticket">
+      <img src="images/tour2.png" alt="tour2" />
+      <div class="ticket_text">
+        <h3>City Hiking Tour (1.5 hours)</h3>
+        <p>Get onboard one of our Round City Cable Car Tour</p>
+      </div>
+      <div class="vl"></div>
+      <div class="price">
+        <p>$ 45.00</p>
+      </div>
+    </div>
+    <div class="ticket">
+      <img src="images/tour3.png" alt="tour3" />
+      <div class="ticket_text">
+        <h3>City Hiking Tour (3 hours)</h3>
+        <p>Get onboard one of our Round City Cable Car Tour</p>
+      </div>
+      <div class="vl"></div>
+      <div class="price">
+        <p>$ 45.00</p>
+      </div>
+    </div>
+    <div class="ticket">
+      <img src="images/tour4.png" alt="tour4" />
+      <div class="ticket_text">
+        <h3>City Cable Car Tour (2 hours)</h3>
+        <p>Get onboard one of our Round City Cable Car Tour</p>
+      </div>
+      <div class="vl"></div>
+      <div class="price">
+        <p>$ 85.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="travel">
+    <h1>Traveling is Easy</h1>
+    <div class="accordian_box">
+      <div class="text_box">
+        <h2>All Services in One Round</h2>
+        <h3>Travel on beaches</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sem id justo hendrerit varius.
+          Nulla nec ante diam. Aenean ligula elit, rutrum vitae est nec, imperdiet vestibulum lacus.
+          Nulla commodo sodales euismod. Ut sed elementum diam. Suspendisse potenti. Etiam sed augue et urna
+          imperdiet tincidunt. Curabitur imperdiet enim luctus turpis fringilla viverra.
+          Phasellus dictum et dolor sit amet ornare. Vestibulum ante ipsum primis in faucibus
+          orci luctus et ultrices posuere cubilia Curae; Donec ultrices ante ipsum, id ornare turpis
+          pharetra ac.</p>
+        <button type="button">Read more</button>
+      </div>
+      <div class="accordian">
+        <h3>Discover popular places</h3>
+        <button class="acc accordionBtn1" onclick="showPanel()">TYRKEY&nbsp;&nbsp;&nbsp; <img src="images/acc_arrow.png"
+            alt="acc_arrow" /></button>
+        <div class="panel">
+          <h3>Istanbul</h3>
+          <p>Istanbul is a transcontinental city in Eurasia, straddling the Bosporus strait (which separates Europe and
+            Asia) between the Sea of Marmara and the Black Sea. Its commercial and historical center lies on the
+            European side and about a third of its population lives in suburbs on the Asian side of the Bosporus.</p>
+        </div>
+        <button class="acc accordionBtn2" onclick="showPanel()">RUSSIA&nbsp;&nbsp;&nbsp; <img src="images/acc_arrow.png"
+            alt="acc_arrow" /></button>
+        <div class="panel">
+          <h3>Moscow</h3>
+          <p>Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital.
+            In its historic core is the Kremlin, a complex that’s home to the president and tsarist
+            treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center.
+            It's home to Lenin’s Mausoleum, the State Historical.</p>
+        </div>
+        <button class="acc accordionBtn3" onclick="showPanel()">BRAZIL&nbsp;&nbsp;&nbsp; <img src="images/acc_arrow.png"
+            alt="acc_arrow" /></button>
+        <div class="panel">
+          <h3>Brasília</h3>
+          <p>Brasília was planned and developed by Lúcio Costa, Oscar Niemeyer and Joaquim Cardozo in 1956 to move the
+            capital from Rio de Janeiro to a more central location. The landscape architect was Roberto Burle
+            Marx. The city's design divides it into numbered blocks as well as sectors for specified activities,
+            such as the Hotel Sector, the Banking Sector and the Embassy Sector. Brasília was chosen as a UNESCO World
+            Heritage Site due to its modernist architecture and uniquely artistic urban planning.</p>
+        </div>
+        <button class="acc accordionBtn4" onclick="showPanel()">CHINA&nbsp;&nbsp;&nbsp; <img src="images/acc_arrow.png"
+            alt="acc_arrow" /></button>
+        <div class="panel">
+          <div class="line">
+            <h3>Great Wall of China</h3>
+          </div>
+          <p>The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, wood, and other
+            materials, generally built along an east-to-west line across the historical northern borders of China to
+            protect the Chinese states and empires against the raids and invasions of the various nomadic groups of the
+            Eurasian Steppe with an eye to expansion.</p>
+        </div>
+        <button class="acc accordionBtn5" onclick="showPanel()">THAILAND&nbsp;&nbsp;&nbsp; <img
+            src="images/acc_arrow.png" alt="acc_arrow" /></button>
+        <div class="panel">
+          <h3>Koh Similan</h3>
+          <p>Located in the Andaman Sea, Koh Similan is the largest island in the Similan Islands group. It boasts white
+            sandy beaches lapped by striking blue waters, and interesting rock formations. The clear, deep waters around
+            the island are also renowned for offering some of the best diving and snorkelling in Thailand, if not the
+            world. The island is home to a fascinating array of bird life too, and the sunset vistas are incredible.</p>
+        </div>
+      </div>
+    </div>
+    <article>
+      <h2>I am page heading</h2>
+      <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh
+        porta, quis fermentum lacus porta. Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus
+        lectus. Duis sollicitudin vestibulum egestas. Praesent pharetra congue quam sed sodales. Proin in bibendum
+        purus. Aenean blandit purus a hendrerit tincidunt. Check it <a href="#">here</a>.</p>
+      <ul>
+        <li>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at
+          nibh
+          porta,</li>
+        <li>In ac sodales odio, ac viverra ante. Nunc massa felis, blandit fringilla risus eget, feugiat vulputate
+          nulla. Duis sollicitudin dictum velit sit amet sodales. Mauris in sapien vitae risus maximus condimentum et a
+          diam. Nullam rutrum rutrum enim, in luctus libero egestas non.</li>
+        <li>Duis vel euismod arcu. </li>
+      </ul>
+      <h3>I am page subheading</h3>
+      <p>Duis vel euismod arcu. Etiam vestibulum leo ipsum, nec lacinia nunc lobortis posuere. Nam luctus lorem at nibh
+        porta, quis fermentum lacus porta.<br /><br />Nam dictum dapibus convallis. Suspendisse vitae porta arcu, non cursus
+        lectus. Duis sollicitudin vestibulum
+        egestas. Praesent pharetra congue quam sed sodales. Proin in bibendum purus. Aenean blandit purus a hendrerit
+        tincidunt. Check it <a href="#">here</a>. </p>
+    </article>
+  </section>
+
+  <section class="contact">
+    <h1>Contact Us</h1>
+    <form method="POST" action="#" onsubmit="return proveraForme(this)">
+      <label for="name">Full name</label>
+      <br />
+      <input type="text" id="name" placeholder="John Doerr" name="name"/>
+      <br />
+      <label for="mail">E-mail</label>
+      <br />
+      <input type="email" id="mail" placeholder="jhondoerr@google.com" name="email"/>
+      <br />
+      <label for="message">Message</label>
+      <br />
+      <textarea id="message" rows="5" placeholder="Your message" name="message"></textarea>
+      <br />
+      <input type="checkbox" id="terms" class="check" checked name="checkbox">
+      <label for="terms" class="lch">I agree to the <span>Terms</span>, <span>Privacy Policy</span>, and
+        <span>Fees</span></label>
+      <br /><br />
+      <button id="submitBtn" type="submit">Send message</button>
+    </form>
+  </section>
+  <section class="footer">
+    <div class="logo_footer">
+      <img src="images/logo_white.png" alt="logo_white" />
+      <p>Industry-leading travel app</p>
+      <p>Aliquam viverra non risus eget auctor<br />Praesent tincidunt nunc quis tellus congue</p>
+      <p>Made in Novi Sad,<br />Serbia, SRB</p>
+    </div>
+    <div class="links">
+      <h4>FREE TOOLS</h4>
+      <ul>
+        <li><a href="#">Instagram Aduit</a></li>
+        <li><a href="#">Instagram Brands Index</a></li>
+        <li><a href="#">Instagram Influencers Index</a></li>
+      </ul>
+    </div>
+    <div class="links">
+      <h4>ABOUT</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pricing</a> </li>
+        <li><a href="#">FAQ</a> </li>
+        <li><a href="#">Product Changes</a></li>
+      </ul>
+    </div>
+    <div class="links">
+      <h4>FEATURES</h4>
+      <ul>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Activity</a></li>
+        <li><a href="#">Content management</a></li>
+        <li><a href="#">Publishing</a></li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+   
+    <div>
+      <a href="#"><img src="images/tvitter.png" alt="tvitter" /></a>
+      <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+      <a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+    </div>
+    <p>© Company Name All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
